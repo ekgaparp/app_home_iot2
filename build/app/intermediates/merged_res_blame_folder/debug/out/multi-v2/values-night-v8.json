@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pleng_ekgaparp/Workspace/app_home_iot/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/pleng_ekgaparp/app_home_iot2/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/pleng_ekgaparp/Workspace/app_home_iot/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

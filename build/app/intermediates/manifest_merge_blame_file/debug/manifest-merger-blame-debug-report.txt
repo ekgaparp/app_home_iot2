@@ -13,14 +13,14 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/pleng_ekgaparp/Workspace/app_home_iot/android/app/src/main/AndroidManifest.xml:39:5-67
-15-->/Users/pleng_ekgaparp/Workspace/app_home_iot/android/app/src/main/AndroidManifest.xml:39:22-64
+15-->/Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:5-67
+15-->/Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:22-64
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->/Users/pleng_ekgaparp/Workspace/app_home_iot/android/app/src/main/AndroidManifest.xml:37:5-80
-16-->/Users/pleng_ekgaparp/Workspace/app_home_iot/android/app/src/main/AndroidManifest.xml:37:22-77
+16-->/Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:37:5-80
+16-->/Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:37:22-77
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->/Users/pleng_ekgaparp/Workspace/app_home_iot/android/app/src/main/AndroidManifest.xml:41:5-81
-17-->/Users/pleng_ekgaparp/Workspace/app_home_iot/android/app/src/main/AndroidManifest.xml:41:22-78
+17-->/Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:41:5-81
+17-->/Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:41:22-78
 18
 19    <application
 20        android:name="android.app.Application"
