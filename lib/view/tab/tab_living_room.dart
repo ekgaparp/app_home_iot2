@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
@@ -14,9 +12,9 @@ class TabLivingRoom extends StatefulWidget {
 }
 
 class _TabLivingRoomState extends State<TabLivingRoom> {
-  bool enabledLigthStatus = true;
+  bool enabledLightStatus = true;
   bool enabledTempStatus = false;
-  bool enabledhumdStatus = false;
+  bool enabledHumdStatus = false;
   bool statusTurnOnLight = false;
 
   //Web-Socket-Chanel
@@ -24,26 +22,28 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
   bool connected = false;
   // IOWebSocketChannel channel = IOWebSocketChannel;
 
-  final _channel = IOWebSocketChannel.connect(Uri.parse('ws://192.168.0.1:8080'));
+  final _channel =
+      IOWebSocketChannel.connect(Uri.parse('ws://192.168.0.1:8080'));
 
   @override
   void initState() {
-    Future.delayed(Duration.zero, () {
-      return connectChanel(); //connect to WebSocket wth NodeMCU
-    });
+    // Future.delayed(Duration.zero, () {
+    //   return connectChanel(); //connect to WebSocket wth NodeMCU
+    // });
+    
     super.initState();
   }
 
   void connectChanel() {
     try {
-      _channel.stream.listen((mesage) {
-        print('has.event :$mesage');
+      _channel.stream.listen((message) {
+        print('has.event :$message');
         setState(() {
-          if (mesage == "connected") {
+          if (message == "connected") {
             connected = true;
-          } else if (mesage == "poweron:success") {
+          } else if (message == "poweron:success") {
             ledStatus = true;
-          } else if (mesage == "poweroff:success") {
+          } else if (message == "poweroff:success") {
             ledStatus = false;
           }
         });
@@ -103,9 +103,9 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
             _buildButtonHumdtInLivingRoom()
           ],
         ),
-        enabledLigthStatus ? _buildBodyLightInRoom() : Container(),
+        enabledLightStatus ? _buildBodyLightInRoom() : Container(),
         enabledTempStatus ? _buildTempBody() : Container(),
-        enabledhumdStatus ? _buildHumdBody() : Container()
+        enabledHumdStatus ? _buildHumdBody() : Container()
       ]),
     );
   }
@@ -113,15 +113,15 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
   Widget _buildButtonLightInLivingRoom() {
     return InkWell(
       onTap: () {
-        if (enabledLigthStatus == true) {
+        if (enabledLightStatus == true) {
           setState(() {
-            enabledLigthStatus = true;
+            enabledLightStatus = true;
           });
         } else {
           setState(() {
-            enabledLigthStatus = true;
+            enabledLightStatus = true;
             enabledTempStatus = false;
-            enabledhumdStatus = false;
+            enabledHumdStatus = false;
           });
         }
       },
@@ -135,7 +135,7 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(15)),
-                gradient: enabledLigthStatus
+                gradient: enabledLightStatus
                     ? LinearGradient(
                         colors: [Colors.teal.shade500, Colors.teal.shade200],
                         begin: Alignment.centerLeft,
@@ -146,13 +146,18 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
                       )),
             child: Column(
               children: <Widget>[
-                const SizedBox(height: 5),
+                const SizedBox(height: 15),
+                Image.asset('assets/image/lamp.png',
+                    height: 50,
+                    width: 50,
+                    color: enabledLightStatus ? Colors.white : Colors.black),
+                const SizedBox(height: 10),
                 Text(
                   'Lights',
                   style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       color:
-                          (enabledLigthStatus ? Colors.white : Colors.black)),
+                          (enabledLightStatus ? Colors.white : Colors.black)),
                 ),
               ],
             ),
@@ -172,15 +177,15 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
         } else {
           setState(() {
             enabledTempStatus = true;
-            enabledLigthStatus = false;
-            enabledhumdStatus = false;
+            enabledLightStatus = false;
+            enabledHumdStatus = false;
           });
         }
       },
       onLongPress: () {},
       child: SizedBox(
         height: 120,
-        width: 120,
+        width: 150,
         child: Card(
           color: Colors.white,
           shape: RoundedRectangleBorder(
@@ -200,18 +205,20 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
                       )),
             child: Column(
               children: <Widget>[
-                const SizedBox(height: 5),
+                const SizedBox(height: 15),
+                Image.asset(
+                  'assets/image/thermometer.png',
+                  height: 50,
+                  width: 50,
+                  color: enabledTempStatus ? Colors.white : Colors.black,
+                ),
+                const SizedBox(height: 10),
                 Text(
                   'Temperature',
                   style: TextStyle(
-                      fontSize: 19,
+                      fontSize: 18,
                       color: (enabledTempStatus ? Colors.white : Colors.black)),
-                ),
-                // Image.asset(
-                //   'assets/icon/sofa_icon.png',
-                //   height: 70,
-                //   width: 70,
-                // )
+                )
               ],
             ),
           ),
@@ -224,16 +231,16 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
     return InkWell(
       focusColor: Colors.amber,
       onTap: () {
-        if (enabledhumdStatus == true) {
+        if (enabledHumdStatus == true) {
           setState(() {
             enabledTempStatus = false;
-            enabledLigthStatus = false;
+            enabledLightStatus = false;
           });
         } else {
           setState(() {
             enabledTempStatus = false;
-            enabledLigthStatus = false;
-            enabledhumdStatus = true;
+            enabledLightStatus = false;
+            enabledHumdStatus = true;
           });
         }
       },
@@ -249,7 +256,7 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(15)),
-                gradient: enabledhumdStatus
+                gradient: enabledHumdStatus
                     ? LinearGradient(
                         colors: [Colors.teal.shade500, Colors.teal.shade200],
                         begin: Alignment.centerLeft,
@@ -260,18 +267,18 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
                       )),
             child: Column(
               children: <Widget>[
-                const SizedBox(height: 5),
+                const SizedBox(height: 15),
+                Image.asset('assets/image/humidity.png',
+                    height: 50,
+                    width: 50,
+                    color: (enabledHumdStatus ? Colors.white : Colors.black)),
+                const SizedBox(height: 10),
                 Text(
                   'humidity',
                   style: TextStyle(
-                      fontSize: 20,
-                      color: (enabledhumdStatus ? Colors.white : Colors.black)),
-                ),
-                // Image.asset(
-                //   'assets/icon/sofa_icon.png',
-                //   height: 70,
-                //   width: 70,
-                // )
+                      fontSize: 18,
+                      color: (enabledHumdStatus ? Colors.white : Colors.black)),
+                )
               ],
             ),
           ),
@@ -283,13 +290,14 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
   Widget _buildBodyLightInRoom() {
     return Column(
       children: <Widget>[
-        const SizedBox(height: 20),
+        const SizedBox(height: 30),
         const Text('ปริมาณเเสงในห้อง'),
-        const SizedBox(height: 20),
-        const Icon(Icons.wb_sunny_outlined),
+        const SizedBox(height: 60),
         Container(
-          height: 200,
-        ),
+            padding: const EdgeInsets.only(bottom: 50),
+            child: statusTurnOnLight
+                ? _buildStatusLamp(imagePath: 'assets/image/lamp_on.png')
+                : _buildStatusLamp(imagePath: 'assets/image/lamp_off.png')),
         FlutterSwitch(
             activeColor: Colors.teal,
             value: statusTurnOnLight,
@@ -307,8 +315,7 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
               setState(() {
                 statusTurnOnLight = val;
               });
-
-              print('val :$val');
+              // print('val :$val');
             }),
         const SizedBox(height: 15),
         Container(
@@ -320,6 +327,13 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
         ),
       ],
     );
+  }
+
+  Widget _buildStatusLamp({required String imagePath}) {
+    return Container(
+        padding: const EdgeInsets.only(top: 20, bottom: 20),
+        height: 200,
+        child: Image.asset(imagePath));
   }
 
   Widget _buildTempBody() {

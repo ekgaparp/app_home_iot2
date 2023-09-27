@@ -1,3 +1,4 @@
+import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:app_home_iot/view/tab/tab_living_room.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  TextEditingController textController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +55,6 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-
                 // children: List<int>.generate(100, (index) => index)
                 //     .map((index) => Container(
                 //           height: 40,
@@ -64,6 +65,7 @@ class _HomePageState extends State<HomePage> {
                 //         ))
                 //     .toList(),
                 children: [
+                  _buildSearchLocation(),
                   _buildWeather(),
                   _buildRoomButton(),
                 ],
@@ -72,6 +74,26 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
+    );
+  }
+
+  Widget _buildSearchLocation() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        AnimSearchBar(
+          onSubmitted: (String) {
+            print('String :$String');
+          },
+          onSuffixTap: (){
+            setState(() {
+            textController.clear();
+          });
+          },
+          textController: textController,
+          width: 370,
+        )
+      ],
     );
   }
 
@@ -89,7 +111,7 @@ class _HomePageState extends State<HomePage> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-         const  Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 10.0, right: 10.0),
             child: Icon(
               Icons.cloud,
@@ -117,7 +139,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           )),
-         const  Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 10.0, right: 10.0),
             child: Text(
               '12°',
@@ -138,37 +160,42 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(height: 10),
         SizedBox(
             height: 203,
-            child: ListView.builder(
-                shrinkWrap: true,
-                physics: const BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return _buildButtonLivingRoom(
-                    title: 'Live Room',
-                    onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: ((context) {
-                      //   return const TabLivingRoom();
-                      // })));
-                    },
-                  );
-                }))
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  _buildButtonLivingRoom(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: ((context) {
+                          return const TabLivingRoom();
+                        })));
+                      },
+                      title: 'Living Room',
+                      imagePath: 'assets/icon/sofa_icon.png'),
+                  _buildButtonLivingRoom(
+                      onTap: () {},
+                      title: 'Kitchen Room',
+                      imagePath: 'assets/icon/sofa_icon.png'),
+                  _buildButtonLivingRoom(
+                      onTap: () {},
+                      title: 'BedRoom',
+                      imagePath: 'assets/icon/sofa_icon.png')
+                ],
+              ),
+            ))
       ],
     );
   }
 
-  Widget _buildButtonLivingRoom({String? title, void Function()? onTap}) {
+  Widget _buildButtonLivingRoom(
+      {String? title, void Function()? onTap, String? imagePath}) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: ((context) {
-          return const TabLivingRoom();
-        })));
-      },
+      onTap: onTap,
       onLongPress: () {},
       child: SizedBox(
         // height: 200,
-        width: 180,
+        width: 200,
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15.0),
@@ -181,7 +208,10 @@ class _HomePageState extends State<HomePage> {
                   title!,
                   style: const TextStyle(fontSize: 20),
                 ),
-                Image.asset('assets/icon/sofa_icon.png')
+                Image.asset(
+                  imagePath!,
+                  height: 150,
+                )
               ],
             ),
           ),
