@@ -30,7 +30,7 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
     // Future.delayed(Duration.zero, () {
     //   return connectChanel(); //connect to WebSocket wth NodeMCU
     // });
-    
+
     super.initState();
   }
 
@@ -94,9 +94,10 @@ class _TabLivingRoomState extends State<TabLivingRoom> {
         elevation: 0.0,
       ),
       backgroundColor: Colors.white,
-      body: Column(children: [
+      body: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
         const SizedBox(height: 20),
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _buildButtonLightInLivingRoom(),
             _buildButtonTempInLivingRoom(),
