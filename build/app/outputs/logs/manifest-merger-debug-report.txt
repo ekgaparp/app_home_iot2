@@ -22,11 +22,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/plen
 	android:name
 		INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-46:12
-INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-46:12
-INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-46:12
-INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-46:12
-MERGED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-46:12
+ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-44:12
+INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-44:12
+INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-44:12
+INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-44:12
+MERGED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-44:12
 MERGED from [:geolocator_android] /Users/pleng_ekgaparp/app_home_iot2/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:geocoding_android] /Users/pleng_ekgaparp/app_home_iot2/build/geocoding_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/pleng_ekgaparp/.gradle/caches/transforms-3/246793f755122fe14a5802655438cb75/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
@@ -59,11 +59,11 @@ INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/debug/AndroidM
 		INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-46:12
+		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-44:12
 		INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-46:12
+		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:1-44:12
 		INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -72,27 +72,27 @@ ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManif
 	android:name
 		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:37:22-77
 uses-permission#android.permission.INTERNET
-ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:5-67
-MERGED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:5-67
-MERGED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:5-67
+ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:38:5-67
+MERGED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:38:5-67
+MERGED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:38:5-67
 	android:name
-		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:22-64
+		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:38:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:5-81
+	android:name
+		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:39:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:40:5-79
+	android:name
+		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:40:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:41:5-81
 	android:name
 		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:41:22-78
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:42:5-79
-	android:name
-		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:42:22-76
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:43:5-81
-	android:name
-		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:43:22-78
 uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
-ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:44:5-85
+ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:42:5-85
 	android:name
-		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:44:22-82
+		ADDED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml:42:22-82
 uses-sdk
 INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/pleng_ekgaparp/app_home_iot2/android/app/src/main/AndroidManifest.xml
