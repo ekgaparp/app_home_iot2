@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weather/weather.dart';
 
+import '../tab/tab_kitchen.dart';
+
 // enum AppState { NOT_DOWNLOADED, DOWNLOADING, FINISHED_DOWNLOADING }
 
 class HomePage extends StatefulWidget {
@@ -54,7 +56,6 @@ class _HomePageState extends State<HomePage> {
                           bottomLeft: Radius.circular(12.0),
                           bottomRight: Radius.circular(12.0)),
                       gradient: LinearGradient(
-                        
                           colors: [
                             Colors.yellow.shade700,
                             Colors.redAccent,
@@ -87,7 +88,6 @@ class _HomePageState extends State<HomePage> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           final weather = snapshot.data;
-
           return Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -206,20 +206,25 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  _buildButtonLivingRoom(
+                  _buildButtonRoom(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: ((context) {
-                          return const TabLivingRoom();
-                        })));
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: ((context) {
+                        //   return const TabLivingRoom();
+                        // })));
                       },
                       title: 'Living Room',
                       imagePath: 'assets/icon/sofa_icon.png'),
-                  _buildButtonLivingRoom(
-                      onTap: () {},
+                  _buildButtonRoom(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: ((context) {
+                          return const TabKitchen();
+                        })));
+                      },
                       title: 'Kitchen Room',
                       imagePath: 'assets/icon/sofa_icon.png'),
-                  _buildButtonLivingRoom(
+                  _buildButtonRoom(
                       onTap: () {},
                       title: 'BedRoom',
                       imagePath: 'assets/icon/sofa_icon.png')
@@ -230,7 +235,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _buildButtonLivingRoom(
+  Widget _buildButtonRoom(
       {String? title, void Function()? onTap, String? imagePath}) {
     return GestureDetector(
       onTap: onTap,
