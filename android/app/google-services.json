@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2284407214",
+    "project_id": "app-home-iot",
+    "storage_bucket": "app-home-iot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2284407214:android:1c46b8d66a50a00c96a03f",
+        "android_client_info": {
+          "package_name": "com.example.app_home_iot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALQ0PEY_GOWYf6eizGnupXwQn320g7OOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

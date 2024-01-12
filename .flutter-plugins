@@ -1,9 +1,17 @@
 # This is a generated file; do not edit or check into version control.
-geocoding=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geocoding-2.1.1/
-geocoding_android=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geocoding_android-2.1.2/
-geocoding_ios=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geocoding_ios-2.1.0/
-geolocator=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geolocator-10.1.0/
-geolocator_android=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geolocator_android-4.3.1/
-geolocator_apple=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geolocator_apple-2.3.2/
-geolocator_web=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geolocator_web-2.2.0/
-geolocator_windows=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dartlang.org/geolocator_windows-0.2.1/
+firebase_analytics=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_analytics-10.7.4/
+firebase_analytics_web=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_analytics_web-0.5.5+11/
+firebase_auth=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_auth-4.15.3/
+firebase_auth_web=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_auth_web-5.8.12/
+firebase_core=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_core-2.24.2/
+firebase_core_web=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_core_web-2.10.0/
+firebase_database=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_database-10.3.8/
+firebase_database_web=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/firebase_database_web-0.2.3+16/
+geocoding=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geocoding-2.1.1/
+geocoding_android=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geocoding_android-2.1.2/
+geocoding_ios=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geocoding_ios-2.1.0/
+geolocator=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geolocator-10.1.0/
+geolocator_android=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geolocator_android-4.3.1/
+geolocator_apple=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.2/
+geolocator_web=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geolocator_web-2.2.0/
+geolocator_windows=/Users/pleng_ekgaparp/.pub-cache/hosted/pub.dev/geolocator_windows-0.2.1/

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weather/weather.dart';
 
+import '../tab/tab_bedroom.dart';
 import '../tab/tab_kitchen.dart';
 
 // enum AppState { NOT_DOWNLOADED, DOWNLOADING, FINISHED_DOWNLOADING }
@@ -225,7 +226,12 @@ class _HomePageState extends State<HomePage> {
                       title: 'Kitchen Room',
                       imagePath: 'assets/icon/sofa_icon.png'),
                   _buildButtonRoom(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: ((context) {
+                          return const TabBedRoom();
+                        })));
+                      },
                       title: 'BedRoom',
                       imagePath: 'assets/icon/sofa_icon.png')
                 ],
